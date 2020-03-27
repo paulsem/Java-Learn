@@ -1,13 +1,153 @@
-oop avantaje:
+----------oop avantaje:
 	* mai rapid la executare
 	* structura mai clara a programelor 
 	* mentine codul curat si il face mai usor la modificat si detectat probleme
 	* face posibila creearea de cod reutilizabil = > mai putin cod de scris => timp mai putin alocat dezvoltarii aplicatiei
 
-Diferenta clase si obiecte
+------------Diferenta clase si obiecte
 	* o clasa este un template pentru obiecte
 	* un obiect este o instanta a unei clase
 
-metode (static vs non-static)
+------------metode (static vs non-static)
 	* static => o metoda statica poate fii accesata fara a creea un obiect de tipul clasei 
 	* public void Metoda(...) => poate fii accesata doar prin intermediul unui obiect 
+
+-----------constructori
+	* metoda speciala pentru initializarea obiectelor
+	* se apeleaza cand un obiect este creeat
+	* este o metoda care are nume similar clasei, poate avea parametrii 
+
+Example:
+// Create a MyClass class
+public class MyClass {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the MyClass class
+  public MyClass() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    MyClass myObj = new MyClass(); // Create an object of class MyClass (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+
+// Outputs 5
+
+
+--------------modificatori 
+1. Acces modifiers
+**pentru clase
+public    = classa este accesibila de orice alta clasa
+default  = clasa este accesibila doar claselor din acelasi pachet 
+
+
+** pentru atribute si metode 
+public 	= codul este accesibil pentru toate clasele
+private 	= codul este accesibil doar in interiorul clasei declarate
+default 	= codul este accesibil doar in pachetul specific
+protected = codul este accesibil doar in pachetul respectiv si in subclase 
+
+2.Non-Acces Modifiers
+** pentru clase
+final 	= clasa nu poate fii mostenita de alte clase
+abstract 	= classa nu poate fii folosita sa creezi obiecte(pentru a accesa o clasa abstracta trebuie mai intai mostenita din alta clasa)
+
+**pentru atribute si metode
+final 	= atributele si metodele nu pot fii rescriese/modificate
+static 	= atributele apartin clasei, mai degraba decat obiectelor 
+abstract	= poate fii folosit doar in clasele abstracte. Metoda nu are body
+transient 	= atributele si metodele are skipped cand initializam un obiect ce le contine 
+synchronized = metodele pot fii accesate doar de cate un thread pe rand
+volatile 	= valoarea atributului nu este cached thread-localy, and is always read from the "main memory"
+
+
+----------------Incapsulare
+
+Def: Ne asiguram ca informatiile senzitive sunt ascunse de utilizator
+* asiguram metodele get si set public pentru a accesa valori private ale clasei 
+
+De ce sa folosim encapsulare ?
+	* control mai bun asupra atributelor si metodelor
+	* atributele sunt read-only pentru metoda get si write-only pentru metoda set 
+	* flexibil : programatorul poate schimba o parte a codului fara a afecta cealalta parte 
+	* securitate sporita
+
+--------------Java packages 
+
+1. Sunt folosite pentru a grupa clase care au legatura intre ele 
+2. E mai usor de intretinut si de modificat un cod structurat pe pachete
+
+3. 2 categorii:	
+	3.1 build-in packages(from java api)
+	3.2 user-defined packages(cream noi pachete)
+
+sintaxa build-in:
+	import package.name.Class //importa o singura clasa
+	import package.name // importa tot pachetul
+sintaxa user-defined:
+	package mypack; la inceputul clasei 
+
+-------------Java inheritance 
+
+subclase si superclase
+* subclass(clasa copil)
+*siperclass(clasa parinte)
+
+keyword = extends 
+
+copilul mosteneste metodele si atributele parintelui
+keywordul final blocheaza alte clase sa mosteneasca clasa respectiva
+
+-------------Java polimorfism 
+exemplu:
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+--------------Java inner classe 
+
+clase in interiorul altei clase 
+exemplu:
+class OuterClass {
+  int x = 10;
+
+  class InnerClass {
+    int y = 5;
+  }
+}
+
+public class MyMainClass {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+// Outputs 15 (5 + 10)
+
+pentru a accesa un inner class trebuie sa creeam un obiect de tipul outer class si apoi creeam o clasa innerclass prin obiectul outerclass (brainfreeze - why would you need that ???)
+
+
+
+
+
+
+
+
