@@ -1,0 +1,85 @@
+--------------------- java variables:
+
+String - stocheaza texte "asdfdsa"
+int - integers fara decimale 
+float - 
+char - caractere 'a'
+boolean 
+
+final = constant - nu se poate schimba valoarea - read only
+
+
+---------------tipuri de date 
+
+1 byte = 8 bits 
+primitive = byte	- 1 byte (-128  : 127)
+	short	-2 bytes (-32768 3 : 32767)
+	int	-4 bytes
+	long	- 8 bytes
+	float	-4 bytes  (6-7 decimale)
+	double	- 8 bytes (15 decimale)
+	boolean	- 1 bit
+	char	- 2 bytes
+
+non-primitive = String, Array, Classes
+
+--------------java type casting 
+smaller to bigger
+byte -> short -> char -> int -> long -> float -> double (conversie automata)
+
+ex :
+int myInt = 10;
+double myDouble = myInt;
+
+bigger to smaller
+double -> float -> long -> int -> char -> short -> byte(conversie manuala)
+
+double myDouble =1.44;
+int myInt = (int) myDouble;  --- returns 1  _se pune tipul in fata !!
+
+
+--------------operatori = similar c++
+
+
+-------------strings 
+
+	*metode: -length -lungime sir (txt.length())
+		-txt.toUpperCase()
+		-txt.toLowerCase()
+		-txt.indexOf("ex")  = returneaza pozitia substringului ex in txt (un fel de find)
+		-string.concat(string2) - concatenare
+	* concatenare ( string1 + string2)
+	\ before " to output "
+
+-------------math
+
+*metode
+	- math.min(x,y)
+	-math.max(x,y) = maxim 2 numere ca argument
+	-math.sqrt(x)
+	-math.abs(x)
+	-math.random = returneaza un numar intre 0 si 1
+
+
+-------------structuri elementare
+
+while = ca in c++
+for = ca in c++
+foreach = for(String i : elemente) = itereaza printr-o lista de Stringuri
+
+continue = sare un element 
+break = opreste executie loop 
+
+
+--------------arrays:
+
+declarare 
+int[] myNum = {1,2,4 ..}
+String[] cars = {"a","b","c"}
+
+se pot parcurge cu for si foreach
+
+*****array multidimensional
+
+int [][] myNumbers = {{1,2,3,4}, {5,6,7}};
+

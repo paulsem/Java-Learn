@@ -1,0 +1,8 @@
+similare ca in celelalte limbaje
+
+1 ex:
+static void myMethod(String fname) {
+    System.out.println(fname + " Refsnes");
+  }
+
+** suporta overloading 

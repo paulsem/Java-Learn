@@ -1,0 +1,13 @@
+oop avantaje:
+	* mai rapid la executare
+	* structura mai clara a programelor 
+	* mentine codul curat si il face mai usor la modificat si detectat probleme
+	* face posibila creearea de cod reutilizabil = > mai putin cod de scris => timp mai putin alocat dezvoltarii aplicatiei
+
+Diferenta clase si obiecte
+	* o clasa este un template pentru obiecte
+	* un obiect este o instanta a unei clase
+
+metode (static vs non-static)
+	* static => o metoda statica poate fii accesata fara a creea un obiect de tipul clasei 
+	* public void Metoda(...) => poate fii accesata doar prin intermediul unui obiect 
