@@ -1,0 +1,21 @@
+1. JVK, JRE, JVM
+
+JDK	= Java Development Kit
+	= tool necesar pentru compilare, document and package java programms 
+	= contine JRE +  development tools
+JRE	= Java Runtime Environment
+	= se refera la runtime environment in care java bytecode poate fii executat 
+	= o implementare a JVM care exista fizic
+JVM 	= Java Virtual Machine 
+	= o masina abstracta.
+	= provides a runtime enveronment in which java can be executed 
+	= follows 3 notations : Specification	Implementation 	Runtime Instance
+
+2. Explain public static void main(String args[])
+	= main - java entry point 	
+	= public - acces modifier 
+	= static - inseamna ca clasa respectiva poate fii apelata fara a creea o instanta a clasei respective 
+	= void - tipul returnat
+	= String args[] = parametrul primit de metoda main 
+
+3. Diferenta dintre Heap si Stack Memory

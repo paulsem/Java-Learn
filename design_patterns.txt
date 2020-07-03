@@ -1,0 +1,13 @@
+Avantaje:	
+	1. reutilizabile in multiple proiecte 
+	2. pun la dispozitie solutii care ajuta definirea arhitecturei sistemului 
+	
+
+
+1. Creational Pattern 
+	- design patternuri care se ocupa cu mecanismul de creeare a obiectelor. Incearca sa creeze obiecte intr-o maniera potrivita situatiei. Rezolva 
+
+2. Structural Pattern 
+
+3. Behavioral Pattern 
+

@@ -145,6 +145,107 @@ public class MyMainClass {
 pentru a accesa un inner class trebuie sa creeam un obiect de tipul outer class si apoi creeam o clasa innerclass prin obiectul outerclass (brainfreeze - why would you need that ???)
 
 
+--------------java abstraction
+
+abstract class = o clasa care nu poate fii folosita pentru creearea obiectelor. Pentru a o accesa trebuie mostenita de alta clasa
+
+--------------java interface
+
+interface = a completely abstract class
+pentru a le accesa trebuie implementate de o alta clasa
+in loc de extends folosim implements 
+
+--------------java enums 
+enum = o clasa speciala care reprezinta grupe de constante( variabile neschimbate similare final)
+
+
+exemplu:
+//declarare
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+
+//accesare
+Level myVar = Level.MEDIUM;
+
+* se pot folosi in switch case
+* iterabile cu foreach  (accesam valorile cu .values())
+exemplu:
+for (Level myVar : Level.values()) {
+  System.out.println(myVar);
+}
+
+
+-----------user input 
+Scanner = clasa folosita pentru a lua inputul utilizatorului (pachetul java.util)
+ 
+*metode:
+nextBoolean()	Reads a boolean value from the user
+nextByte()	Reads a byte value from the user
+nextDouble()	Reads a double value from the user
+nextFloat()	Reads a float value from the user
+nextInt()	Reads a int value from the user
+nextLine()	Reads a String value from the user
+nextLong()	Reads a long value from the user
+nextShort()	Reads a short value from the user
+
+
+-------------Java ArrayList
+
+diferenta dintre ArrayList si array in java este ca ArrayList poate fi modificat daca vrei sa adaugi sau sa scoti elemente din array.
+*declarare  
+	ArrayList<String> cars = new ArrayList<string>
+* metode 
+	.add("value")
+	.get(1) - item by position 
+	.set(1,"value") - schimba valoarea itemului de pe pozitia 1
+	.remove(1) - remove item pozitia 1
+	.clear() - remove all elements in array 
+
+
+------------java Collection
+import java.util.Collections; //import the collection classes
+
+	Collection.sort(array) // sorteaza array-ul
+
+------------java HashMap = un fel de dictionar python 
+
+example
+
+import java.util.HashMap; // import the HashMap class
+HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+metode :
+	.put("value",value)
+	.get("value")
+	.remove("value")	
+	.clear()
+	.size()
+	.keySet() -- folosit pentru iterarea prin chei
+	.values() -- folosit pentru iterarea prin valori
+
+-------------java Wrapper
+
+*converteste primitivele in obiecte 
+*folosite pentru ArrayList si de asemenea putem apela metode cu ele
+
+byte	Byte
+short	Short
+int	Integer
+long	Long
+float	Float
+double	Double
+boolean	Boolean
+char	Character
+
+example
+ArrayList<int> myNumbers = new ArrayList<int>(); // Invalid
+ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid
+
+-----------java Exceptions
+
 
 
 
